@@ -106,16 +106,14 @@
 .main-image {
   background-image: url("/images/main-image.svg");
   position: absolute;
-left: 96.37%;
-right: -96.24%;
-top: 0%;
-bottom: 0.1%;
-height: 311.7103797638283px;
-width: 406.355061045224px;
-left: 213px;
-top: 242px;
-border-radius: 0px;
-background-repeat: no-repeat;
+  right: -96.24%;
+  bottom: 0.1%;
+  height: 311.7103797638283px;
+  width: 406.355061045224px;
+  left: 213px;
+  top: 232px;
+  border-radius: 0;
+  background-repeat: no-repeat;
 }
 
 /* Medium devices (tablets, 600px and up) */
