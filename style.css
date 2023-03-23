@@ -55,6 +55,7 @@
   color: #ff6b00;
   margin-left: 20px;
   margin-right: 20px;
+  margin-top: -120px;
 }
 
 .support-text {
@@ -85,13 +86,17 @@
 
 .accounts {
   display: flex;
+  margin-left: 15px;
+  width: 200px;
+  height: 40px;
 }
 
 .accounts a {
   list-style: none;
   text-decoration: none;
   color: #dbd8d7;
-  margin-left: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 .accounts li {
@@ -99,13 +104,18 @@
 }
 
 .main-image {
-  background-image: url("/main-image.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  align-self: flex-end;
-  width: 108.89px;
-  height: 312.03px;
-  margin-top: -196px;
+  background-image: url("/images/main-image.svg");
+  position: absolute;
+left: 96.37%;
+right: -96.24%;
+top: 0%;
+bottom: 0.1%;
+height: 311.7103797638283px;
+width: 406.355061045224px;
+left: 213px;
+top: 242px;
+border-radius: 0px;
+background-repeat: no-repeat;
 }
 
 /* Medium devices (tablets, 600px and up) */
