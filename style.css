@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Poppins:ital,wght@0,200;1,200&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Inter:wght@400;500;700&family=Poppins:ital,wght@0,200;1,200&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap");
 
 * {
   margin: 0;
@@ -163,57 +163,62 @@
     display: none;
   }
 }
-.work-head{
-width: 327px;
-height: 83px;
-font-family: 'Crete Round';
-font-style: normal;
-font-weight: 400;
-font-size: 40px;
-line-height: 52px;
-display: flex;
-align-items: center;
-color: #1C1A19;
-flex: none;
-order: 0;
-flex-grow: 0;
-}
-.img-ph{
+
+.work-head {
   width: 327px;
-height: 237px;
-background: url(image_processing20200716-21735-f07s4k.png);
-flex: none;
-order: 0;
-flex-grow: 0;
+  height: 83px;
+  font-family: 'Crete Round', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  display: flex;
+  align-items: center;
+  color: #1c1a19;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
-.post-title{
+
+.img-ph {
   width: 327px;
-height: 36px;
-font-family: 'Crete Round';
-font-style: normal;
-font-weight: 400;
-font-size: 32px;
-line-height: 44px;
-display: flex;
-align-items: center;
-color: #091E42;
-flex: none;
-order: 0;
-flex-grow: 0;
+  height: 237px;
+  background: url(image_processing20200716-21735-f07s4k.png);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
-.sup-txt{
-width: 327px;
-height: 147px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-color: #091E42;
-flex: none;
-order: 1;
-flex-grow: 0;
+
+.post-title {
+  width: 327px;
+  height: 36px;
+  font-family: 'Crete Round', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  display: flex;
+  align-items: center;
+  color: #091e42;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
+
+.sup-txt {
+  width: 327px;
+  height: 147px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #091e42;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
 /* Work Section */
 .grid-items {
   display: grid;
@@ -394,8 +399,7 @@ flex-grow: 0;
   align-self: flex-end;
   max-width: calc(100% - 20px);
   margin-top: -76px;
-  margin-right: 0px;
-  background-color: #1c1a19;
+  margin-right: 0;
 }
 
 .about-sec hr {
@@ -431,7 +435,7 @@ flex-grow: 0;
   line-height: 114px;
 }
 
-.skills{
+.skills {
   list-style: disc inside url("img/circle.png");
   font-style: normal;
   font-weight: 700;
@@ -499,4 +503,3 @@ button:disabled {
 .see-project {
   width: 322px;
 }
-
