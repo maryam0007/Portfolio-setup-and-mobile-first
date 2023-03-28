@@ -503,3 +503,124 @@ button:disabled {
 .see-project {
   width: 322px;
 }
+
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+  margin-bottom: 124px;
+}
+.contact-text{
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  color: #172b4d;
+  margin-bottom: 72px;
+  height: 216px;
+  width: 327px;
+}
+
+.form  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-text{
+font-family: 'Inter',sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 24px;
+display: flex;
+align-items: center;
+color: #979493;
+border-bottom: 1px solid #dbd8d7;
+border-top: none;
+border-left: none;
+border-right: none;
+margin-bottom: 29px;
+padding-bottom: 11px;
+padding-left: 16px;
+width: 327px;
+height: 48px;
+}
+.input-text:focus {
+border-color: #6b6867;
+outline-style: none;
+}
+.input-message{
+font-family: "Inter",sans-serif;
+font-style: italic;
+padding-left: 12px;
+padding-right: 12px;
+padding-top: 12px;
+padding-bottom: 12px;
+font-weight: 400;
+font-size: 15px;
+line-height: 24px;
+color: #3C3A39;
+background: #fbf8f7;
+border: none;
+margin-bottom: 24px;
+width: 327px;
+height: 114px;
+}
+.message-field:focus {
+  outline-style: none;
+}
+.form button{
+  width: 131px;
+}
+
+/* Footer Section */
+/* .footer hr{
+  background: #dfe1e6;
+}
+.footer-accounts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  height: 60px;
+}
+.github-foot {
+  background-image: url("img/github.png");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+}
+.linkedin-foot {
+  background-image: url("img/linkedin.png");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+}
+
+.angellist-foot {
+  background-image: url("img/angelist.png");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+}
+
+.twitter-foot {
+  background-image: url("img/twitter.png");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+}
+
+.medium-foot {
+  background-image: url("img/medium.png");
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+}
+*/
