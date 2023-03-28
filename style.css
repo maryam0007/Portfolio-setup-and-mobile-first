@@ -585,7 +585,11 @@ button:disabled {
 }
 
 /* Footer Section */
+<<<<<<< HEAD
 .footer hr {
+=======
+ .footer hr{
+>>>>>>> 2bd12c6539a926132884b69077593f456b79f49a
   background: #dfe1e6;
 }
 
