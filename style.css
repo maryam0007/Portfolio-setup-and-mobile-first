@@ -685,6 +685,7 @@
     color: white;
     margin-left: 8px;
     margin-right: 34px;
+    transition: color 0.5s ease;
   }
   .envelope {
     background-image: url("img/envelope.png");
