@@ -50,6 +50,14 @@
     margin-right: 24px;
     margin-top: 10px;
   }
+  .mob-bars{
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    margin-right: 24px;
+    margin-top: 10px;
+    position: relative;
+  }
 
   /* Hero Section */
   .main-div {
@@ -835,6 +843,7 @@
     line-height: 28px;
     color: #091e42;
     margin-top: 24px;
+    margin-bottom: 24px;
   }
 
   .languages-list {
