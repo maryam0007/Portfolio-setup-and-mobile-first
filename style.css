@@ -42,15 +42,31 @@
     margin-top: 24px;
     position: absolute;
   }
-
+  
   .card-grid {
     display: none;
+    }
+    
+  .fa-bars {
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    margin-right: 24px;
+    margin-top: 10px;
+  }
+
+  .mob-bars {
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    margin-right: 24px;
+    margin-top: 10px;
+    position: relative;
   }
 
   .card-grid-mob {
     margin-top: 521px;
   }
-
 
 .fa-bars {
   cursor: pointer;
@@ -663,6 +679,19 @@ button:disabled {
     text-align: center;
     color: #fff;
     width: 40vw;
+    animation: rotate 1s ease-in-out;
+    animation-fill-mode: forwards;
+    transform-origin: center center;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
   .navbar {
@@ -691,6 +720,7 @@ button:disabled {
     color: white;
     margin-left: 8px;
     margin-right: 34px;
+    transition: color 0.5s ease;
   }
 
   .envelope {
@@ -777,6 +807,10 @@ button:disabled {
     height: 20px;
     margin-top: 20px;
     margin-left: 36px;
+  }
+
+  .nav-link a:hover {
+    color: orange;
   }
 
   .main-image {
