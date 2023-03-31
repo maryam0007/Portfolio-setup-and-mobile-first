@@ -50,7 +50,8 @@
     margin-right: 24px;
     margin-top: 10px;
   }
-  .mob-bars{
+
+  .mob-bars {
     cursor: pointer;
     font-family: "Roboto", sans-serif;
     color: white;
@@ -650,14 +651,16 @@
     animation-fill-mode: forwards;
     transform-origin: center center;
   }
+
   @keyframes rotate {
-  0% {
-    transform: rotate(0deg);
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
   }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
   .navbar {
     width: 1440px;
@@ -687,6 +690,7 @@
     margin-right: 34px;
     transition: color 0.5s ease;
   }
+
   .envelope {
     background-image: url("img/envelope.png");
     background-repeat: no-repeat;
@@ -771,6 +775,10 @@
     height: 20px;
     margin-top: 20px;
     margin-left: 36px;
+  }
+
+  .nav-link a:hover {
+    color: orange;
   }
 
   .main-image {
