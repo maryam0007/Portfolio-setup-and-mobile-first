@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Inter:wght@400;500;700&family=Poppins:ital,wght@0,200;1,200&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Inter:wght@400;500;700&family=Poppins:ital,wght@0,200;1,200&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap");
 
 * {
   margin: 0;
@@ -42,6 +42,20 @@
     margin-top: 24px;
     position: absolute;
   }
+.main-heading{
+  font-family: "Crete Round", serif;
+  max-width: 327px;
+  max-height: 188px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: 0.37px;
+  color: #ff6b00;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -120px;
+}
 
   .fa-bars {
     cursor: pointer;
@@ -88,6 +102,20 @@
     margin-left: 20px;
     margin-right: 20px;
   }
+.accounts {
+  display: flex;
+  margin-left: 15px;
+  width: 200px;
+  height: 40px;
+}
+
+.accounts a {
+  list-style: none;
+  text-decoration: none;
+  color: #dbd8d7;
+  width: 40px;
+  height: 40px;
+}
 
   .descriptive-text {
     font-family: "Poppins", sans-serif;
@@ -105,6 +133,13 @@
   .accounts {
     display: flex;
   }
+#menu-icon {
+  position: absolute;
+  width: 150px;
+  right: 0;
+  bottom: 0;
+  background-position: right;
+}
 
   .accounts a {
     list-style: none;
