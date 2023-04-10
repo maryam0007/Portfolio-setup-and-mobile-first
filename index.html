@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="./index.js"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +14,23 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    
     <title>Portfolio</title>
 </head>
 <body>
     <header>
+       <div id="menu-">
+      <div id="closed">
+        <span class="close">&times;</span>
+      </div>
+      <div id="menu-list">
+        <ul id="mlist">
+          <li><a href="#work-section">Portfolio</a></li><hr>
+           <li><a href="#about-sec">About</a></li><hr>
+          <li><a href="#contact-form">Contact</a></li> <hr>
+        </ul>
+      </div>
+    </div>
         <nav class="navbar">
           <div class="logo" href="#">Maryam</div>
           <ul class="navbar-flex">
@@ -23,8 +38,8 @@
             <li class="nav-link"><a href="#">About</a></li>
             <li class="nav-link"><a href="#">Contact</a></li>
             <li class="envelope"><a href="#"></a></li>
-            <li class="mob-bars">
-              <a href="#"><i class="fa-solid fa-bars"></i></a>
+            <li class="mob-bars" id="mob-barss">
+              <a href="#" id="menu-icon"><i class="fa-solid fa-bars"></i></a>
             </li>
           </ul>
         </nav>
@@ -61,7 +76,7 @@
       </div>
         <div class="main-image"></div>
       </section>
-      <section class="work-section">
+      <section id="work-section" class="work-section">
         <div class="grid-items">
           <div class="desktop-hr">
           <h1 class="work-main-heading">My Recent Works</h1>
@@ -254,7 +269,7 @@
 
       </div>
       </section>
-      <section class="about-sec">
+      <section id="about-sec" class="about-sec">
         <div class="about-desktop">
         <div><h1 class="about-head">About me</h1></div>
         <div><p class="about-descrip">
@@ -314,7 +329,7 @@
         </ul>
       </div>
       </section>
-      <section class="contact-form">
+      <section id="contact-form" class="contact-form">
         <div left-text><h3 class="contact-text">I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h3></div>
         <form class="form" action="https://formspree.io/f/xvonwgga" method="post">
           <input class="input-text" type="text" placeholder="Full name" maxlength="30" required>
