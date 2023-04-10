@@ -60,8 +60,8 @@
     cursor: pointer;
     font-family: "Roboto", sans-serif;
     color: white;
-    margin-right: 24px;
-    margin-top: 10px;
+    margin-right: -28px;
+    margin-top: 20px;
     position: relative;
   }
 
@@ -665,20 +665,20 @@
   }
 
   #menu-list {
-    margin-top: 108px;
+    margin-top: 84px;
   }
 
   #mlist li {
-    font-family: "Inter", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
-    font-weight: 70;
+    font-weight: 700;
     font-size: 32px;
-    line-height: 44px;
+    line-height: 30px;
     color: #fff5e1;
     margin-left: 40px;
     list-style-type: none;
-    margin-top: 24px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 9px;
   }
 
   #mlist li a {
