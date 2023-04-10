@@ -4,15 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const closebtn = document.getElementById('closed');
   const menuitems = document.getElementById('mlist');
 
-  button.onclick = function () {
+  button.onclick = function showMenu() {
     menu.style.display = 'block';
   };
 
-  closebtn.onclick = function () {
+  closebtn.onclick = function hideMenu() {
     menu.style.display = 'none';
   };
 
-  menuitems.onclick = function () {
+  menuitems.onclick = function hideMenu() {
     menu.style.display = 'none';
   };
-}); 
+});
