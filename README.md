@@ -56,7 +56,7 @@
 
 > Add a link to your deployed project.
 
-- [Not applicable for this project]()
+- [Live Demo Link](https://maryam0007.github.io/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
