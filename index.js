@@ -1,4 +1,4 @@
-/*document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const menu = document.getElementById('menu-');
   const button = document.getElementById('mob-barss');
   const closebtn = document.getElementById('closed');
