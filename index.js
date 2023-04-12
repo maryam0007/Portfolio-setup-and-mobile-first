@@ -5,13 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuitems = document.getElementById('mlist');
   const worksectiondsk = document.querySelector('.dynamic-dsk');
   const worksectionmob = document.querySelector('.mob-html');
-  // const popupmobile = document.getElementById('popupmobile');
-  // const closepopup = document.getElementById('popupclosemobile');
-  // const popupdesk = document.getElementById('popupdesk');
-  // const buttonpopupdesk = document.getElementById('desk-button');
-  // const closepopupdesk = document.getElementById('close-desk-');
-
-  // const workid = document.querySelector('#works-');
 
   button.onclick = function showMenu() {
     menu.style.display = 'block';
@@ -329,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const details = document.querySelectorAll('#project');
   // Create pop up section for mobile
-  for (let i = 0; i < details.length; i + 1) {
+  for (let i = 0; i < details.length; i += 1) {
     details[i].addEventListener('click', () => {
       const div = document.createElement('div');
       div.classList.add = 'pop-up-mobile';
@@ -453,7 +446,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const detail = document.querySelectorAll('#deskbutton');
   // Create pop up section for desktop
-  for (let i = 0; i < details.length; i + 1) {
+  for (let i = 0; i < details.length; i += 1) {
     detail[i].addEventListener('click', () => {
       const div2 = document.createElement('div');
       div2.classList.add = 'pop-up-desk';
