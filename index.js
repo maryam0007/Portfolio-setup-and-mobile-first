@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuitems = document.getElementById('mlist');
   const worksectiondsk = document.querySelector('.dynamic-dsk');
   const worksectionmob = document.querySelector('.mob-html');
-  const popupmobile = document.getElementById('popupmobile');
-const closepopup= document.getElementById('popupclosemobile');
-const popupdesk= document.getElementById('popupdesk');
-const buttonpopupdesk= document.getElementById('desk-button');
-const closepopupdesk= document.getElementById('close-desk-');
+  // const popupmobile = document.getElementById('popupmobile');
+  // const closepopup = document.getElementById('popupclosemobile');
+  // const popupdesk = document.getElementById('popupdesk');
+  // const buttonpopupdesk = document.getElementById('desk-button');
+  // const closepopupdesk = document.getElementById('close-desk-');
 
-const workid = document.querySelector('#works-');
+  // const workid = document.querySelector('#works-');
 
   button.onclick = function showMenu() {
     menu.style.display = 'block';
@@ -25,7 +25,7 @@ const workid = document.querySelector('#works-');
     menu.style.display = 'none';
   };
 
-  worksectiondsk.innerHTML=`
+  worksectiondsk.innerHTML = `
   <div class="card-grid">
   <div class="card">
     <button type="button" class="button-primary-desk" id="deskbutton">
@@ -98,7 +98,7 @@ const workid = document.querySelector('#works-');
   </div>
 </div>
       `;
-      worksectionmob.innerHTML=`
+  worksectionmob.innerHTML = `
       <div class="btn-left-mob">
               <button type="button" class="button-primary" id="project">See Project</button>
             </div> 
@@ -196,114 +196,114 @@ const workid = document.querySelector('#works-');
         </div>
         `;
   // Create new array of objects for mobile
- const cardDetails = [
-   {
-     id: 0,
-     title: 'Multi Post Stories',
-     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-     tecnologies: {
-       tech1: 'html',
-       tech2: 'bootstrap',
-       tech3: 'Ruby',
-     },
-     live: 'https://maryam0007.github.io/',
-     source: 'https://maryam0007.github.io/',
-     img: './img/popup-mob.png',
-   },
-  {
-    id: 1,
-    title: 'Profesional Art Printing Data',
-    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard" ,
-    tecnologies: {
-      tech1: 'html',
-      tech2: 'bootstrap',
-      tech3: 'Ruby',
+  const cardDetails = [
+    {
+      id: 0,
+      title: 'Multi Post Stories',
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+      tecnologies: {
+        tech1: 'html',
+        tech2: 'bootstrap',
+        tech3: 'Ruby',
+      },
+      live: 'https://maryam0007.github.io/',
+      source: 'https://maryam0007.github.io/',
+      img: './img/popup-mob.png',
     },
-    live: 'https://maryam0007.github.io/',
-    source: 'https://maryam0007.github.io/',
-    img: './img/popup-mob.png',
-  },
-  {
-    id: 2,
-    title: 'Professional Art Printing Data',
-    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-    tecnologies: {
-      tech1: 'html',
-      tech2: 'bootstrap',
-      tech3: 'Ruby',
+    {
+      id: 1,
+      title: 'Profesional Art Printing Data',
+      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+      tecnologies: {
+        tech1: 'html',
+        tech2: 'bootstrap',
+        tech3: 'Ruby',
+      },
+      live: 'https://maryam0007.github.io/',
+      source: 'https://maryam0007.github.io/',
+      img: './img/popup-mob.png',
     },
-    live: 'https://maryam0007.github.io/',
-    source: 'https://maryam0007.github.io/',
-    img: './img/about4-res.png',
-  },
-  {
-    id: 3,
-    title: 'Professional Art Printing Data',
-    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-    tecnologies: {
-      tech1: 'html',
-      tech2: 'bootstrap',
-      tech3: 'Ruby',
+    {
+      id: 2,
+      title: 'Professional Art Printing Data',
+      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+      tecnologies: {
+        tech1: 'html',
+        tech2: 'bootstrap',
+        tech3: 'Ruby',
+      },
+      live: 'https://maryam0007.github.io/',
+      source: 'https://maryam0007.github.io/',
+      img: './img/about4-res.png',
     },
-    live: 'https://maryam0007.github.io/',
-    source: 'https://maryam0007.github.io/',
-    img: './img/about4-res.png',
-  },
-  {
-    id: 4,
-    title: 'Professional Art Printing Data',
-    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-    tecnologies: {
-      tech1: 'html',
-      tech2: 'bootstrap',
-      tech3: 'Ruby',
+    {
+      id: 3,
+      title: 'Professional Art Printing Data',
+      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+      tecnologies: {
+        tech1: 'html',
+        tech2: 'bootstrap',
+        tech3: 'Ruby',
+      },
+      live: 'https://maryam0007.github.io/',
+      source: 'https://maryam0007.github.io/',
+      img: './img/about4-res.png',
     },
-    live: 'https://maryam0007.github.io/',
-    source: 'https://maryam0007.github.io/',
-    img: './img/about4-res.png'
-  },
-  {
-    id: 5,
-    title: 'Professional Art Printing Data',
-    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-    tecnologies: {
-      tech1: 'html',
-      tech2: 'bootstrap',
-      tech3: 'Ruby',
+    {
+      id: 4,
+      title: 'Professional Art Printing Data',
+      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+      tecnologies: {
+        tech1: 'html',
+        tech2: 'bootstrap',
+        tech3: 'Ruby',
+      },
+      live: 'https://maryam0007.github.io/',
+      source: 'https://maryam0007.github.io/',
+      img: './img/about4-res.png',
     },
-    live: 'https://maryam0007.github.io/',
-    source: 'https://maryam0007.github.io/',
-    img: './img/about4-res.png'
-  },
-  {
-    id: 6,
-    title: 'Professional Art Printing Data',
-    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-    tecnologies: {
-      tech1: 'html',
-      tech2: 'bootstrap',
-      tech3: 'Ruby',
+    {
+      id: 5,
+      title: 'Professional Art Printing Data',
+      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+      tecnologies: {
+        tech1: 'html',
+        tech2: 'bootstrap',
+        tech3: 'Ruby',
+      },
+      live: 'https://maryam0007.github.io/',
+      source: 'https://maryam0007.github.io/',
+      img: './img/about4-res.png',
     },
-    live: 'https://maryam0007.github.io/',
-    source: 'https://maryam0007.github.io/',
-    img: './img/about4-res.png'
-  },
-  {
-    id: 7,
-    title: 'Professional Art Printing Data',
-    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-    tecnologies: {
-      tech1: 'html',
-      tech2: 'bootstrap',
-      tech3: 'Ruby',
+    {
+      id: 6,
+      title: 'Professional Art Printing Data',
+      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+      tecnologies: {
+        tech1: 'html',
+        tech2: 'bootstrap',
+        tech3: 'Ruby',
+      },
+      live: 'https://maryam0007.github.io/',
+      source: 'https://maryam0007.github.io/',
+      img: './img/about4-res.png',
     },
-    live: 'https://maryam0007.github.io/',
-    source: 'https://maryam0007.github.io/',
-    img: './img/about4-res.png'
-  },
-];
-// Create pop up section for mob
-const workdetailsSection = (content) => `
+    {
+      id: 7,
+      title: 'Professional Art Printing Data',
+      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+      tecnologies: {
+        tech1: 'html',
+        tech2: 'bootstrap',
+        tech3: 'Ruby',
+      },
+      live: 'https://maryam0007.github.io/',
+      source: 'https://maryam0007.github.io/',
+      img: './img/about4-res.png',
+    },
+  ];
+  // Create pop up section for mob
+  const workdetailsSection = (content) => `
 <div class="pop-up-header" id="popupclosemobile">
         <span class="mobileclose">&times;</span>
         <h2>${cardDetails[content].title}</h2>
@@ -327,107 +327,107 @@ const workdetailsSection = (content) => `
       </div>
 `;
 
-const details = document.querySelectorAll('#project');
-// Create pop up section for mobile
-for (let i = 0; i < details.length; i++) {
-  details[i].addEventListener('click', () => {
-    let div = document.createElement('div');
-    div.classList.add = "pop-up-mobile";
-    div.setAttribute("id", "popupmobile");
-    div.innerHTML = workdetailsSection(i);
-    let container =document.querySelector('.popmobdiv');
-    container.appendChild(div);
-    const closedetails = document.querySelector('.mobileclose');
-     closedetails.addEventListener('click', async =>{
-     container.removeChild(div);
+  const details = document.querySelectorAll('#project');
+  // Create pop up section for mobile
+  for (let i = 0; i < details.length; i + 1) {
+    details[i].addEventListener('click', () => {
+      const div = document.createElement('div');
+      div.classList.add = 'pop-up-mobile';
+      div.setAttribute('id', 'popupmobile');
+      div.innerHTML = workdetailsSection(i);
+      const container = document.querySelector('.popmobdiv');
+      container.appendChild(div);
+      const closedetails = document.querySelector('.mobileclose');
+      closedetails.addEventListener('click', () => {
+        container.removeChild(div);
+      });
+    });
+  }
 
-      }) 
-  })};
+  // Create card section for desktop
+  const deskcardDetails = [
+    {
+      id: 0,
+      title: 'Keeping track of hundreds  of components website',
+      desc: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nemo blanditiis laudantium beatae animi consequuntur, maiores atque obcaecati eveniet ex itaque! Molestias vitae harum distinctio quas, tempora, earum expedita aspernatur laudantium a sunt odit? Voluptatum iusto blanditiis earum libero repellendus amet architecto ad deserunt repellat sequi culpa nihil eum voluptate.',
+      tecnologies: {
+        tech1: 'html',
+        tech2: 'bootstrap',
+        tech3: 'Ruby',
+      },
+      live: 'https://maryam0007.github.io/',
+      source: 'https://maryam0007.github.io/',
+      img: './img/popup-desk.png',
+    },
+    {
+      id: 1,
+      title: 'Data Dashboard Healthcare',
+      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+      tecnologies: {
+        tech1: 'html',
+        tech2: 'bootstrap',
+        tech3: 'Ruby',
+      },
+      live: 'https://maryam0007.github.io/',
+      source: 'https://maryam0007.github.io/',
+      img: './img/about-1.png',
+    },
+    {
+      id: 2,
+      title: 'Website Portfolio',
+      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+      tecnologies: {
+        tech1: 'html',
+        tech2: 'bootstrap',
+        tech3: 'Ruby',
+      },
+      live: 'https://maryam0007.github.io/',
+      source: 'https://maryam0007.github.io/',
+      img: './Images/desktop-popup.png',
+    },
+    {
+      id: 3,
+      title: 'Profesional Art Printing Data',
+      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+      tecnologies: {
+        tech1: 'html',
+        tech2: 'bootstrap',
+        tech3: 'Ruby',
+      },
+      live: 'https://maryam0007.github.io/',
+      source: 'https://maryam0007.github.io/',
+      img: './Images/desktop-popup.png',
+    },
+    {
+      id: 4,
+      title: 'Data Dashboard Healthcare',
+      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+      tecnologies: {
+        tech1: 'html',
+        tech2: 'bootstrap',
+        tech3: 'Ruby',
+      },
+      live: 'https://maryam0007.github.io/',
+      source: 'https://maryam0007.github.io/',
+      img: './Images/desktop-popup.png',
+    },
+    {
+      id: 5,
+      title: 'Website Portfolio',
+      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+      tecnologies: {
+        tech1: 'html',
+        tech2: 'bootstrap',
+        tech3: 'Ruby',
+      },
+      live: 'https://maryam0007.github.io/',
+      source: 'https://maryam0007.github.io/',
+      img: './Images/desktop-popup.png',
+    },
 
-// Create card section for desktop
-const deskcardDetails = [
-  {
-    id: 0,
-    title: 'Keeping track of hundreds  of components website',
-    desc: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nemo blanditiis laudantium beatae animi consequuntur, maiores atque obcaecati eveniet ex itaque! Molestias vitae harum distinctio quas, tempora, earum expedita aspernatur laudantium a sunt odit? Voluptatum iusto blanditiis earum libero repellendus amet architecto ad deserunt repellat sequi culpa nihil eum voluptate.",
-    tecnologies: {
-      tech1: 'html',
-      tech2: 'bootstrap',
-      tech3: 'Ruby',
-    },
-    live: 'https://maryam0007.github.io/',
-    source: 'https://maryam0007.github.io/',
-    img: './img/popup-desk.png',
-  },
-  {
-    id: 1,
-    title: 'Data Dashboard Healthcare',
-    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard" ,
-    tecnologies: {
-      tech1: 'html',
-      tech2: 'bootstrap',
-      tech3: 'Ruby',
-    },
-    live: 'https://maryam0007.github.io/',
-    source: 'https://maryam0007.github.io/',
-    img: './img/about-1.png',
-  },
-  {
-    id: 2,
-    title: 'Website Portfolio',
-    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard" ,
-    tecnologies: {
-      tech1: 'html',
-      tech2: 'bootstrap',
-      tech3: 'Ruby',
-    },
-    live: 'https://maryam0007.github.io/',
-    source: 'https://maryam0007.github.io/',
-    img: './Images/desktop-popup.png',
-  },
-  {
-    id: 3,
-    title: 'Profesional Art Printing Data',
-    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard" ,
-    tecnologies: {
-      tech1: 'html',
-      tech2: 'bootstrap',
-      tech3: 'Ruby',
-    },
-    live: 'https://maryam0007.github.io/',
-    source: 'https://maryam0007.github.io/',
-    img: './Images/desktop-popup.png',
-  },
-  {
-    id: 4,
-    title: 'Data Dashboard Healthcare',
-    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard" ,
-    tecnologies: {
-      tech1: 'html',
-      tech2: 'bootstrap',
-      tech3: 'Ruby',
-    },
-    live: 'https://maryam0007.github.io/',
-    source: 'https://maryam0007.github.io/',
-    img: './Images/desktop-popup.png',
-  },
-  {
-    id: 5,
-    title: 'Website Portfolio',
-    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard" ,
-    tecnologies: {
-      tech1: 'html',
-      tech2: 'bootstrap',
-      tech3: 'Ruby',
-    },
-    live: 'https://maryam0007.github.io/',
-    source: 'https://maryam0007.github.io/',
-    img: './Images/desktop-popup.png',
-  },
-  
-];
-// Create generic card section for desktop
-const deskworkdetailsSection = (content) => `
+  ];
+  // Create generic card section for desktop
+  const deskworkdetailsSection = (content) => `
 <div class="pop-up-header-desk">
         <h2>${deskcardDetails[content].title}</h2>
         <span class="close-desk" id="close-desk-">&times;</span>
@@ -451,23 +451,20 @@ const deskworkdetailsSection = (content) => `
       </div>
 `;
 
-const detail = document.querySelectorAll('#deskbutton');
-// Create pop up section for desktop
-for (let i = 0; i < detail.length; i++) {
-detail[i].addEventListener('click', () => {
-  let div2 = document.createElement('div');
-  div2.classList.add = "pop-up-desk";
-  div2.setAttribute("id", "popupdesk");
-  div2.innerHTML = deskworkdetailsSection(i);
-  let container =document.querySelector('.deskdiv');
-  container.appendChild(div2);
-  const deskclose =document.querySelector('.close-desk');
-  deskclose.addEventListener('click', async =>{
-    container.removeChild(div2);
-})
-    }) 
-
-};
-
-
+  const detail = document.querySelectorAll('#deskbutton');
+  // Create pop up section for desktop
+  for (let i = 0; i < details.length; i + 1) {
+    detail[i].addEventListener('click', () => {
+      const div2 = document.createElement('div');
+      div2.classList.add = 'pop-up-desk';
+      div2.setAttribute('id', 'popupdesk');
+      div2.innerHTML = deskworkdetailsSection(i);
+      const container = document.querySelector('.deskdiv');
+      container.appendChild(div2);
+      const deskclose = document.querySelector('.close-desk');
+      deskclose.addEventListener('click', () => {
+        container.removeChild(div2);
+      });
+    });
+  }
 });
