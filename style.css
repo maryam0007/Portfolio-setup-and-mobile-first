@@ -43,6 +43,10 @@
     position: absolute;
   }
 
+  .card-grid {
+    display: none;
+  }
+
   .fa-bars {
     cursor: pointer;
     font-family: "Roboto", sans-serif;
@@ -58,6 +62,10 @@
     margin-right: 24px;
     margin-top: 10px;
     position: relative;
+  }
+
+  .card-grid-mob {
+    margin-top: 521px;
   }
 
   /* Hero Section */
@@ -140,7 +148,7 @@
   }
 
   .main-image {
-    background-image: url("/main-image.svg");
+    background-image: url("./main-image.svg");
     background-size: contain;
     background-repeat: no-repeat;
     align-self: flex-end;
@@ -165,13 +173,9 @@
     flex-grow: 0;
   }
 
-  .img-ph {
-    width: 327px;
-    height: 237px;
-    background: url(image_processing20200716-21735-f07s4k.png);
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+  .about-flex {
+    margin-top: 100px;
+    position: absolute;
   }
 
   .post-title {
@@ -236,11 +240,11 @@
   }
 
   .post-image {
-    background-image: url("/img/background.jpeg");
+    background-image: url("./img/background.jpeg");
     background-repeat: no-repeat;
     min-width: 327px;
     height: 237px;
-    margin-top: 140px;
+    margin-top: 582px;
   }
 
   .work-title-post {
@@ -287,7 +291,7 @@
   }
 
   .card {
-    background-image: url("img/background3.jpeg");
+    background-image: url("./img/background3.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 324px;
@@ -347,7 +351,7 @@
   .about-sec {
     background-color: #1c1a19;
     height: 1901px;
-    margin-top: 120px;
+    margin-top: -2320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -365,6 +369,12 @@
     margin-bottom: 24px;
   }
 
+  .about-desktop {
+    display: flex;
+    flex-direction: column;
+    margin-top: -1300px;
+  }
+
   .about-descrip {
     font-family: "Inter", sans-serif;
     font-style: normal;
@@ -377,20 +387,23 @@
   }
 
   .about-image {
-    background-image: url("img/background2.png");
+    background-image: url("./img/background2.png");
     background-repeat: no-repeat;
     width: 160.27px;
     height: 258.7px;
     align-self: flex-end;
     max-width: calc(100% - 20px);
     margin-top: -76px;
-    margin-right: 0;
+    z-index: 1;
   }
 
   .about-sec hr {
-    width: 515px;
+    width: 327px;
     max-width: calc(100% - 20px);
     color: #fff;
+    margin-top: 10px;
+    position: absolute;
+    margin-left: -175px;
   }
 
   .about-list {
@@ -400,12 +413,13 @@
     justify-content: center;
     font-family: "Inter", sans-serif;
     color: #fff;
-    margin-top: 136px;
     text-align: center;
+    margin-top: -400px;
+    position: absolute;
   }
 
   .language {
-    list-style: square inside url("img/diamond.png");
+    list-style: square inside url("./img/diamond.png");
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -413,7 +427,7 @@
   }
 
   .frameworks {
-    list-style: square inside url("img/square.jpeg");
+    list-style: square inside url("./img/square.jpeg");
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -421,7 +435,7 @@
   }
 
   .skills {
-    list-style: disc inside url("img/circle.png");
+    list-style: disc inside url("./img/circle.png");
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -584,35 +598,35 @@
   }
 
   .github-foot {
-    background-image: url("img/github.png");
+    background-image: url("./img/github.png");
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
   }
 
   .linkedin-foot {
-    background-image: url("img/linkedin.png");
+    background-image: url("./img/linkedin.png");
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
   }
 
   .angellist-foot {
-    background-image: url("img/angelist.png");
+    background-image: url("./img/angelist.png");
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
   }
 
   .twitter-foot {
-    background-image: url("img/twitter.png");
+    background-image: url("./img/twitter.png");
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
   }
 
   .medium-foot {
-    background-image: url("img/medium.png");
+    background-image: url("./img/medium.png");
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
@@ -692,7 +706,7 @@
   }
 
   .envelope {
-    background-image: url("img/envelope.png");
+    background-image: url("./img/envelope.png");
     background-repeat: no-repeat;
     width: 24px;
     height: 24px;
@@ -782,14 +796,14 @@
   }
 
   .main-image {
-    background-image: url("img/main-image-desktop.svg");
+    background-image: url("./img/main-image-desktop.svg");
     background-size: contain;
     background-repeat: no-repeat;
     align-self: flex-end;
     width: 569px;
     height: 752px;
     margin-top: -459px;
-    margin-left: 797px;
+    margin-left: 872px;
     position: relative;
   }
 
@@ -826,7 +840,7 @@
   }
 
   .post-image {
-    background-image: url("/img/work.desktop.png");
+    background-image: url("./img/work.desktop.png");
     background-repeat: no-repeat;
     min-width: 684px;
     height: 448px;
@@ -907,7 +921,7 @@
   }
 
   .card {
-    background-image: url("img/about-1.png");
+    background-image: url("./img/about-1.png");
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 369px;
@@ -920,7 +934,7 @@
   }
 
   .card-1 {
-    background-image: url("img/about-2.png");
+    background-image: url("./img/about-2.png");
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 369px;
@@ -933,7 +947,7 @@
   }
 
   .card-2 {
-    background-image: url("img/about-3.png");
+    background-image: url("./img/about-3.png");
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 369px;
@@ -946,7 +960,7 @@
   }
 
   .card-3 {
-    background-image: url("img/about-4.png");
+    background-image: url("./img/about-4.png");
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 369px;
@@ -959,7 +973,7 @@
   }
 
   .card-4 {
-    background-image: url("img/about-2.png");
+    background-image: url("./img/about-2.png");
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 369px;
@@ -972,7 +986,7 @@
   }
 
   .card-5 {
-    background-image: url("img/about-3.png");
+    background-image: url("./img/about-3.png");
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 369px;
@@ -1071,7 +1085,7 @@
   }
 
   .about-image {
-    background-image: url(img/desktopabout.png);
+    background-image: url("./img/desktopabout.png");
     position: relative;
     width: 673.27px;
     height: 353px;
@@ -1104,7 +1118,7 @@
   }
 
   .language {
-    list-style: square inside url("img/diamond.png");
+    list-style: square inside url("./img/diamond.png");
     font-style: normal;
     position: absolute;
     font-weight: 700;
@@ -1126,7 +1140,7 @@
   }
 
   .skills {
-    list-style: disc inside url("img/circle.png");
+    list-style: disc inside url("./img/circle.png");
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -1344,35 +1358,35 @@
   }
 
   .github-foot {
-    background-image: url("img/github.png");
+    background-image: url("./img/github.png");
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
   }
 
   .linkedin-foot {
-    background-image: url("img/linkedin.png");
+    background-image: url("./img/linkedin.png");
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
   }
 
   .angellist-foot {
-    background-image: url("img/angelist.png");
+    background-image: url("./img/angelist.png");
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
   }
 
   .twitter-foot {
-    background-image: url("img/twitter.png");
+    background-image: url("./img/twitter.png");
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
   }
 
   .medium-foot {
-    background-image: url("img/medium.png");
+    background-image: url("./img/medium.png");
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
