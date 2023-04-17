@@ -7,17 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const worksectionmob = document.querySelector('.mob-html');
   const desktopbutton = document.querySelector('.btn-left');
 
-  // button.onclick = function showMenu() {
-  //   menu.style.display = 'block';
-  // };
+  button.onclick = function showMenu() {
+    menu.style.display = 'block';
+  };
 
-  // closebtn.onclick = function hideMenu() {
-  //   menu.style.display = 'none';
-  // };
+  closebtn.onclick = function hideMenu() {
+    menu.style.display = 'none';
+  };
 
-  // menuitems.onclick = function hideMenu() {
-  //   menu.style.display = 'none';
-  // };
+  menuitems.onclick = function hideMenu() {
+    menu.style.display = 'none';
+  };
 
   // Create card section for desktop
   const content = [
