@@ -240,13 +240,6 @@ const emailField = document.getElementById('email');
 const messageField = document.getElementById('message');
 const resetButton = document.getElementById('reset');
 
-// Save the form data to local storage when the user types in a field
-function changeHandler() {
-  localStorage.setItem('fullName', fullNameField.value);
-  localStorage.setItem('email', emailField.value);
-  localStorage.setItem('message', messageField.value);
-}
-
 // Retrieve the saved form data from local storage on page load
 window.addEventListener('load', () => {
   fullNameField.value = localStorage.getItem('fullName') || '';
@@ -273,5 +266,4 @@ submit.addEventListener('click', (event) => {
       error.innerHTML = '';
     }, 10000);
   }
-
 });
