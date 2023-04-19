@@ -240,6 +240,18 @@ const emailField = document.getElementById('email');
 const messageField = document.getElementById('message');
 const resetButton = document.getElementById('reset');
 
+// Save the form data to local storage when the user types in a field
+function changeHandler() {
+  localStorage.setItem('fullName', fullNameField.value);
+  localStorage.setItem('email', emailField.value);
+  localStorage.setItem('message', messageField.value);
+}
+
+// Add event listeners to each form field that call changeHandler when the user types in them
+fullNameField.addEventListener('input', changeHandler);
+emailField.addEventListener('input', changeHandler);
+messageField.addEventListener('input', changeHandler);
+
 // Retrieve the saved form data from local storage on page load
 window.addEventListener('load', () => {
   fullNameField.value = localStorage.getItem('fullName') || '';
