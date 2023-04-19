@@ -188,18 +188,23 @@
       <form action="https://formspree.io/f/xvonwgga" class="form" method="post">
         <fieldset>
           <label for="fullName">Full Name</label>
-          <input id="fullName" name="fullName" type="text" placeholder="Full name" maxlength="30" required />
+          <input name="fullName" type="text" placeholder="Full name" id="fullName"
+          onchange="changeHandler()" maxlength="30" required />
         </fieldset>
         <fieldset>
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="Email address" required />
+          <input name="email" type="email" placeholder="Email address"  id="email"
+          onchange="changeHandler()" required />
         </fieldset>
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" maxlength="500" placeholder="Enter text here"
+        <textarea name="message" rows="5" placeholder="Enter text here"  id="message"
+        onchange="changeHandler()" maxlength="500"
           required></textarea>
         <div class="error"></div>
         <button type="submit" class="btn submit">Get in touch</button>
+        <button type="button" id="reset" class="btn">Reset</button>
       </form>
+      
     </section>
   </main>
   <footer class="footer">
