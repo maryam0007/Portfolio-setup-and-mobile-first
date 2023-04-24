@@ -8,6 +8,30 @@
 
 @media screen and (max-width: 768px) {
   /* Navbar Section */
+
+  .popup-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
+  .popup-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    background-color: white;
+  }
+
   .deskdiv {
     display: none;
   }
@@ -85,7 +109,8 @@
   }
 
   .card-grid-mob {
-    margin-top: 12px;
+    margin-top: 119px;
+    margin-left: -6px;
     display: flex;
     flex-direction: column;
   }
@@ -338,6 +363,7 @@
     line-height: 44px;
     max-width: 285px;
     margin-bottom: 4px;
+    margin-left: 16px;
   }
 
   .card-text {
@@ -346,9 +372,9 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    max-width: 285px;
     color: #fff;
     margin-bottom: 2px;
+    margin-left: 16px;
   }
 
   .card-languages-list {
@@ -357,6 +383,7 @@
     width: 285px;
     margin-top: 5px;
     margin-bottom: 10px;
+    margin-left: 16px;
   }
 
   .card-languages-list li {
@@ -517,6 +544,10 @@
     font-size: 17px;
     line-height: 24px;
     border: 1px solid #ff6b00;
+  }
+
+  .btn-left-mob {
+    margin-top: -25px;
   }
 
   .btn-block {
@@ -728,7 +759,7 @@
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 700;
-    margin-left: -30px;
+    margin-left: 14px;
     line-height: 44px;
     vertical-align: top;
 
@@ -737,6 +768,7 @@
 
   .pop-up-header h2 {
     color: #172b4d;
+    margin-left: -8px;
   }
 
   .mobileclose {
@@ -758,8 +790,8 @@
     flex-grow: 0;
     align-self: baseline;
     list-style-type: none;
-    margin-top: -20px;
-    margin-left: 0;
+    margin-top: 10px;
+    margin-left: 6px;
   }
 
   .pop-up-tags li {
@@ -1145,19 +1177,6 @@
     justify-content: center;
   }
 
-  .card-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    column-gap: 24px;
-    row-gap: 37px;
-    margin-top: 24px;
-    width: 1155px;
-    margin-left: 142px;
-    margin-right: 143px;
-    margin-bottom: 130px;
-  }
-
   .card {
     background-image: url("./img/about-1.png");
     background-repeat: no-repeat;
@@ -1243,7 +1262,6 @@
     font-weight: 400;
     font-size: 32px;
     line-height: 44px;
-    margin-bottom: 4px;
     width: 337px;
     height: 81px;
   }
@@ -1266,7 +1284,6 @@
     color: #fff;
     width: 360px;
     align-items: center;
-    padding: 10px 12px;
     height: 40px;
   }
 
@@ -1278,8 +1295,8 @@
     font-weight: 500;
     font-size: 15px;
     line-height: 20px;
-    margin-right: 5px;
-    padding: 5px;
+    margin-right: 12px;
+    padding: 10px;
   }
 
   /* About Section */
@@ -1650,7 +1667,7 @@
     line-height: 20px;
   }
 
-  #popupdesk {
+  /* #popupdesk {
     width: 1156px;
     height: 631px;
     background-color: #fff;
@@ -1658,6 +1675,35 @@
     margin-left: 142px;
     z-index: 1;
     position: absolute;
+  } */
+  .pop-up-desk {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black background */
+    z-index: 9999; /* make sure it appears above other elements */
+    backdrop-filter: blur(10px); /* blur the background */
+    -webkit-backdrop-filter: blur(10px);
+
+    /* stop the body from scrolling while the popup is open */
+    overflow: hidden;
+  }
+
+  .pop-up-cont {
+    position: absolute;
+    background-color: #fff;
+    margin-top: 5vh;
+    margin-left: 15vh;
+  }
+
+  /* add a close button if desired */
+  .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
   }
 
   .pop-up-header-desk {
@@ -1755,6 +1801,13 @@
     padding-right: 25px;
     padding-top: 10px;
     position: absolute;
+  }
+
+  .desk-cards img {
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: -1;
   }
 
   #see-live-desk img {
@@ -1903,6 +1956,107 @@
   }
 
   .mob-html {
+    display: none;
+  }
+
+  /* Define a container for the cards */
+  .dynamic-dsk {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1155px;
+    margin-left: 142px;
+  }
+
+  /* Define the style for the cards */
+  .desk-cards {
+    border: 1px solid #ccc;
+    overflow: hidden;
+    height: 435px;
+    width: 369px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+  }
+
+  .desk-cards:hover .card-content h1,
+  .desk-cards:hover .card-content p,
+  .desk-cards:hover .card-content ul {
+    display: none;
+  }
+
+  .card-content {
+    padding-left: 20px;
+    margin-top: 152px;
+  }
+
+  /* .card-heading {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  } */
+
+  /* .card-text {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  } */
+
+  /* .card-languages-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card-languages-list li {
+    font-size: 14px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background-color: #ccc;
+    border-radius: 20px;
+    color: #fff;
+  } */
+  .button-1 {
+    background-color: #ff6b00;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    color: #fff;
+    border: 1px solid #ff6b00;
+    margin-top: 224px;
+    width: 369px;
+    height: 58px;
+    margin-left: -19px;
+    visibility: hidden;
+  }
+
+  .button-1:hover {
+    background-color: #fff5e1;
+    border: 1px solid #ff6b00;
+    color: #ff6b00;
+    cursor: pointer;
+  }
+
+  .button-1:active {
+    background-color: #ff6b00;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    color: #f4f1f0;
+  }
+
+  .desk-cards:hover .button-1 {
+    visibility: visible;
+  }
+
+  #project {
     display: none;
   }
 }
