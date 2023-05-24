@@ -54,18 +54,18 @@ const projects = [
     seeSourceLink: 'https://github.com/maryam0007/Portfolio-setup-and-mobile-first',
   },
   {
-    title: 'Profesional Art Printing Data More',
-    technologies: ['html', 'Css', 'Ruby'],
+    title: 'Awesome Books',
+    technologies: ['html', 'Css', 'JavaScript'],
     imageURL: [
       './assets/images/content/about-4.png',
       './assets/images/content/about-4.png',
     ],
     content:
-      'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industrys standard.',
+      'Awesome Books is a basic website that allows users to add and remove books from a list. which is done by using JavaScript objects, arrays and local storage.',
     description:
-    'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industrys standard.',
-    seeLiveLink: 'https://github.com/maryam0007/Portfolio-setup-and-mobile-first',
-    seeSourceLink: 'https://github.com/maryam0007/Portfolio-setup-and-mobile-first',
+    'Awesome Books is a basic website that allows users to add and remove books from a list. which is done by using JavaScript objects, arrays and local storage.',
+    seeLiveLink: 'https://maryam0007.github.io/Awesome-books-ES6/',
+    seeSourceLink: 'https://github.com/maryam0007/Awesome-books-ES6',
   },
   {
     title: 'Data Dashboard Healthcare',
