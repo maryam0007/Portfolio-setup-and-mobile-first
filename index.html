@@ -1,213 +1,236 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <script src="./index.js"></script>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    
-    <title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maryam Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Inter:wght@400;500&family=Poppins&family=Roboto:wght@700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
-<body>
-    <header>
-       <div id="menu-">
-      <div id="closed">
-        <span class="close">&times;</span>
-      </div>
-      <div id="menu-list">
-        <ul id="mlist">
-          <li><a href="#work-section">Portfolio</a></li><hr>
-           <li><a href="#about-sec">About</a></li><hr>
-          <li><a href="#contact-form">Contact</a></li> <hr>
-        </ul>
-      </div>
-    </div>
-        <nav class="navbar">
-          <div class="logo" href="#">Maryam</div>
-          <ul class="navbar-flex">
-            <li class="nav-link"><a href="#">Portfolio</a></li>
-            <li class="nav-link"><a href="#">About</a></li>
-            <li class="nav-link"><a href="#">Contact</a></li>
-            <li class="envelope"><a href="#"></a></li>
-            <li class="mob-bars" id="mob-barss">
-            <a href="#" id="menu-icon"><i class="fa-solid fa-bars"></i></a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      
-      <section class="main-div">
-        <div class="intro-div">
-      <h1 class="main-heading">Hey There. <br> I'm Maryam.</h1>
-        <h3 class="support-text">I'am a Software Developer</h3>
-        <p class="descriptive-text">
-          I can help you build a product , feature or website Look through some of
-          my work and experience! If you like what you see and have a project you
-          need coded, don't hesitate to contact me.
-        </p>
-        </div>
-        <div class="accounts-flex">
-        <ul class="accounts">
-          <li>
-            <a href="#"><img src="./images/linkedin.png" alt=""></a>
-          </li>
-          <li>
-          <a href="#"><img src="./images/linkedin.png" alt=""></a>
 
-          </li>
-          <li>
-            <a href="#"><img src="./images/angellist.png" alt=""></a>
-          </li>
-          <li>
-            <a href="#"><img src="./images/twitter.png" alt=""></a>
-          </li>
-          <li>
-            <a href="#"><img src="./images/medium.png" alt=""></a>
-          </li>
+<body>
+  <header class="header">
+    <a href="#home" class="logo">Maryam</a>
+    <nav class="nav">
+      <ul class="nav-menu desktop">
+        <li class="nav-item nav-active">
+          <a href="#home">Portfolio</a>
+        </li>
+        <li class="nav-item nav-active">
+          <a href="#about">About</a>
+        </li>
+        <li class="nav-item nav-active">
+          <a href="#contact">Contact</a>
+        </li>
+        <li class="nav-item icon-active desktop">
+          <a href="#mail">
+            <img src="./assets/images/icons/Icon-Mail.svg" alt="mail" />
+          </a>
+        </li>
+      </ul>
+      <button type="button" class="hamburger mobile">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+  </header>
+  <main class="main">
+    <section id="home" class="headline">
+      <div class="container">
+        <h1 class="primary-title">
+          Hey There.<br />
+          I’m Maryam
+        </h1>
+        <h2 class="headline-supporting">I’m a software developer</h2>
+        <p class="headline-description">
+          I can help you build a product, feature or website Look through
+          some of my work and experience! If you like what you see and have a
+          project you need to be coded, don’t hesitate to contact me.
+        </p>
       </div>
-      <div class="popmobdiv">
+
+      <ul class="social-icons side-links">
+        <li class="icon-active">
+          <a href="https://github.com/maryam0007">
+            <img src="./assets/images/icons/Icon-Github.svg" alt="Github" />
+          </a>
+        </li>
+
+        <li class="icon-active">
+            <img src="./assets/images/icons/Icon-Linkedin.svg" alt="Linkedin" />
+          </a>
+        </li>
+
+        <li class="icon-active">
+            <img src="./assets/images/icons/Icon-Angellist.svg" alt="Angellist" />
+          </a>
+        </li>
+
+        <li class="icon-active">
+            <img src="./assets/images/icons/Icon-Twitter.svg" alt="Twitter" />
+          </a>
+        </li>
+
+        <li class="icon-active">
+            <img src="./assets/images/icons/Icon-Medium.svg" alt="Medium" />
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="works">
+      <div class="recent-works">
+        <div class="works-header">
+          <h1 class="primary-title works-title">My Recent Works</h1>
+          <img src="./assets/images/content/Vector.svg" alt="Vector" />
         </div>
-        
-      </div>
-        <div class="main-image"></div>
-      </section>
-      <section id="work-section" class="work-section">
-        <div class="grid-items">
-          <div class="desktop-hr">
-          <h1 class="work-main-heading">My Recent Works</h1>
-          <hr class="divider" /></div>
-          
-         <div class="deskdiv"></div>
-          <div class="main-card">
-            <div class="post-image"></div>
-            <div class="work-text">
-            <h4 class="work-title-post">Multi-Post Stories</h4>
-            <p class="work-supporting-text">
+
+        <div class="works-stories">
+          <img src="./assets/images/content/work.desktop.png" alt="Recent Works GYMFIT Multi-Post Stories image"
+            class="avatar" />
+          <div class="container">
+            <h2 class="works-supporting">Multi-Post Stories</h2>
+            <p class="text-content works-content">
               A daily selection of privately personalized reads; no accounts or
               sign-ups required.This has been the industry's standard dummy text ever
               since the 1500s, when an unknown printer took a standard dummy text.
             </p>
-            <ul class="languages-list">
-              <li>css</li>
-              <li>html</li>
-              <li>bootstrap</li>
-              <li>Ruby</li>
+            <ul class="tags">
+              <li class="tag">css</li>
+              <li class="tag">html</li>
+              <li class="tag">Bootstrap</li>
+              <li class="tag">Ruby</li>
             </ul>
-           
-              <button type="button" class="button-primary" id="project">See Project</button>         
-            <div class="btn-left">
-              <!-- <button type="button" class="button-primary see-project" id="deskbutton">See Project</button> -->
-            </div>
+            <button type="button" class="btn see-project icon-active">See Project</button>
           </div>
-        </div>
-        <div class="card-grid-mob">
-        <div class="mob-html">
-
         </div>
       </div>
-    
-        <div class="dynamic-dsk">
-        </div>
-    
 
-      </section>
-      <section id="about-sec" class="about-sec">
-        <div class="about-desktop">
-        <div><h1 class="about-head">About me</h1></div>
-        <div><p class="about-descrip">
-          Hello I'm a software developer! I can help you build a product , feature
-          or website Look through some of my work and experience! If you like what
-          you see and have a project you need coded, don't hesitate to contact me.
-        </p></div>
-        <div class="btn-left">
-          <button type="button" class="button-primary">Get My Resume</button>
-        </div>
-        </div>
-        <div class="about-image"></div>
-        <div class="hr"><hr></div>
-        <div class="about-flex">
-        <ul class="about-list">
-          <div class="language"> 
-            <div class="fw">
-            <img src="./img/diamond.png" alt=""> <p>Language</p> 
-          </div>
-            <ul>
-              <div class="new">
-              <li class="list-style-none">Javascript</li>
-              <li class="list-style-none">Ruby</li>
-              <li class="list-style-none">Html</li>
-              <li class="list-style-none">Css</li>
-            </div>
-          </ul>
-          </div>
-          <div class="frameworks">
-            <div class="fw">
-            <img src="./img/square.jpeg" alt=""> <p>Frameworks</p> 
-          </div>
-            <ul>
-              <div class="new">
-              <li class="list-style-none">Bootstrap</li>
-              <li class="list-style-none">Ruby on Rails</li>
-              <li class="list-style-none">RSPec</li>
-              <li class="list-style-none">CapyBara</li>
-              <li class="list-style-none">Selenium</li>
-              </div>
-            </ul>
-          </div>
-          <div class="skills"> 
-            <div class="fw">
-            <img src="./img/circle.png" alt=""> <p>Skills</p> 
-          </div>
-            <ul>
-              <div class="new">
-              <li class="list-style-none">Codekit</li>
-              <li class="list-style-none">Github</li>
-              <li class="list-style-none">Codepen</li>
-              <li class="list-style-none">Gitlab</li>
-              <li class="list-style-none">Terminal</li>
-              </div>
-            </ul>
-        </div>
-        </ul>
+      <div class="card-works"></div>
+    </section>
+
+    <section class="wrapper">
+      <div class="modal hidden"></div>
+    </section>
+
+    <section id="about" class="about-skill">
+      <div class="about">
+        <h1 class="primary-title about-title">About me</h1>
+        <p class="text-content about-detail">
+          Hello, I’m a software developer! I can help you build a product,
+          feature or website Look through some of my work and experience! If
+          you like what you see and have a project you need to be coded for, don’t
+          hesitate to contact me.
+        </p>
+        <button type="button" class="btn icon-active">Get My Resume</button>
       </div>
-      </section>
-      <section id="contact-form" class="contact-form">
-        <div left-text><h3 class="contact-text">I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h3></div>
-        <form class="form" action="https://formspree.io/f/xvonwgga" method="post">
-          <input class="input-text" type="text" placeholder="Full name" maxlength="30" required>
-          <input class="input-text" type="text" placeholder="Email Address" required>
-          <textarea class="input-message" name="message" d=""i cols="30" rows="10" maxlength="500" placeholder="Write me something..." required></textarea>
-          <button type="submit" class="button-primary">Get In Touch</button>
-        </form>
-      </section>
-      <footer class="footer">
+      <div class="skills">
         <hr />
-        <ul class="footer-accounts">
-          <li>
-            <a href="#"><div class="github-foot"></div></a>
-          </li>
-          <li>
-            <a href="#"><div class="linkedin-foot"></div></a>
-          </li>
-          <li>
-            <a href="#"><div class="angellist-foot"></div></a>
-          </li>
-          <li>
-            <a href="#"><div class="twitter-foot"></div></a>
-          </li>
-          <li>
-            <a href="#"><div class="medium-foot"></div></a>
-          </li>
-        </ul>
-      </footer>
+        <div class="skill">
+          <div>
+            <div class="skill-header">
+              <img src="./assets/images/icons/Dimond.svg" alt="Dimond" />
+              <h2 class="skill-title">Language</h2>
+            </div>
+            <ul class="skill-detail">
+              <li>Javascript</li>
+              <li>Ruby</li>
+              <li>Html</li>
+              <li>Css</li>
+              <li>Javascript</li>
+            </ul>
+          </div>
+          <div>
+            <div class="skill-header">
+              <img src="./assets/images/icons/Rectangle.svg" alt="Rectangle" />
+              <h2 class="skill-title">Frameworks</h2>
+            </div>
+            <ul class="skill-detail">
+              <li>Bootstrap</li>
+              <li>Ruby on Rails</li>
+              <li>RSPec</li>
+              <li>CapyBara</li>
+              <li>Selenium</li>
+            </ul>
+          </div>
+          <div>
+            <div class="skill-header">
+              <img src="./assets/images/icons/Circle.svg" alt="Circle" />
+              <h2 class="skill-title">Skills</h2>
+            </div>
+            <ul class="skill-detail">
+              <li>Codekit</li>
+              <li>Github</li>
+              <li>Codepen</li>
+              <li>Gitlab</li>
+              <li>Terminal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact-me">
+      <h2 class="contact-title">
+        I'm always interested in hearing about new projects, so if you'd like
+        to chat please get in touch.
+      </h2>
+      <form action="https://formspree.io/f/xvonwgga" class="form" method="post">
+        <fieldset>
+          <label for="fullName">Full Name</label>
+          <input id="fullName" name="fullName" type="text" placeholder="Full name" maxlength="30" required />
+        </fieldset>
+        <fieldset>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Email address" required />
+        </fieldset>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" maxlength="500" placeholder="Enter text here"
+          required></textarea>
+        <div class="error"></div>
+        <button type="submit" class="btn submit">Get in touch</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <ul class="social-icons">
+      <li>
+        <a href="https://github.com/maryam0007">
+          <img src="./assets/images/icons/Icon-Github.svg" alt="Github" />
+        </a>
+      </li>
+
+      <li>
+          <img src="./assets/images/icons/Icon-Linkedin.svg" alt="Linkedin" />
+        </a>
+      </li>
+
+      <li>
+          <img src="./assets/images/icons/Icon-Angellist.svg" alt="Angellist" />
+        </a>
+      </li>
+
+      <li>
+          <img src="./assets/images/icons/Icon-Twitter.svg" alt="Twitter" />
+        </a>
+      </li>
+
+      <li>
+          <img src="./assets/images/icons/Icon-Medium.svg" alt="Medium" />
+        </a>
+      </li>
+    </ul>
+    <img src="./assets/images/icons/Shape.svg" alt="shape" class="mobile" />
+  </footer>
+  <script src="./index.js"></script>
 </body>
+
 </html>

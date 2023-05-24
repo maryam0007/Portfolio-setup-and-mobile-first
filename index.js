@@ -1,457 +1,248 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const menu = document.getElementById('menu-');
-  const button = document.getElementById('mob-barss');
-  const closebtn = document.getElementById('closed');
-  const menuitems = document.getElementById('mlist');
-  const worksectiondsk = document.querySelector('.dynamic-dsk');
-  const worksectionmob = document.querySelector('.mob-html');
-  const desktopbutton = document.querySelector('.btn-left');
+const logo = document.querySelector('.logo');
+const navMenu = document.querySelector('.nav-menu');
+const hamburger = document.querySelector('.hamburger');
+const navItem = document.querySelectorAll('.nav-item');
+const modal = document.querySelector('.modal');
+const cards = document.querySelector('.card-works');
+const wrapper = document.querySelector('.wrapper');
+const overFlow = document.querySelector('*');
+const submit = document.querySelector('.submit');
 
-  button.onclick = function showMenu() {
-    menu.style.display = 'block';
-  };
+const openMenu = () => {
+  logo.classList.toggle('active');
+  navMenu.classList.remove('desktop');
+  navMenu.classList.toggle('active');
+  hamburger.classList.toggle('active');
+};
 
-  closebtn.onclick = function hideMenu() {
-    menu.style.display = 'none';
-  };
+const closeMenu = () => {
+  navMenu.classList.add('desktop');
+  logo.classList.remove('active');
+  navMenu.classList.remove('active');
+  hamburger.classList.remove('active');
+};
 
-  menuitems.onclick = function hideMenu() {
-    menu.style.display = 'none';
-  };
+hamburger.addEventListener('click', () => {
+  openMenu();
+});
 
-  // Create card section for desktop
-  const content = [
-    {
-      id: 0,
-      title: 'Data Dashboard Healthcare',
-      desc: 'Keeping track of hundreds  of components website',
-      technologies: ['html', 'bootstrap', 'Ruby on rails'],
-      img: './img/about-4.png',
-    },
-    {
-      id: 1,
-      title: 'Website Portfolio',
-      desc: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry standard',
-      technologies: ['html', 'bootstrap', 'Ruby'],
-      img: './img/about-2.png',
-    },
-    {
-      id: 2,
-      title: 'Professional Art Printing Data More',
-      desc: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry standard',
-      technologies: ['html', 'bootstrap', 'Ruby'],
-      img: './img/about-3.png',
-    },
-    {
-      id: 3,
-      title: 'Professional Art Printing Data More',
-      desc: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry standard',
-      technologies: ['html', 'bootstrap', 'Ruby'],
-      img: './img/about-4.png',
-    },
-    {
-      id: 4,
-      title: 'Professional Art Printing Data More',
-      desc: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry standard',
-      technologies: ['html', 'bootstrap', 'Ruby'],
-      img: './img/about-2.png',
-    },
-    {
-      id: 5,
-      title: 'Professional Art Printing Data More',
-      desc: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry standard',
-      technologies: ['html', 'bootstrap', 'Ruby'],
-      img: './img/about-3.png',
-    },
-
-  ];
-
-  const content1 = [
-    {
-      id: 0,
-      title: 'Keeping track of hundreds  of components website',
-      desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.                                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.',
-      technologies: ['html', 'bootstrap', 'Ruby on Rails'],
-      img: './img/popup-desk.png',
-    },
-
-  ];
-
-  // Desktop see-project button
-  desktopbutton.innerHTML = `
-  <button type="button" class="button-primary" id="deskbutton">See Project</button>
-`;
-
-  const deskButton = document.getElementById('deskbutton');
-  deskButton.addEventListener('click', () => {
-    const contentItem = content1[0];
-
-    const popupHtml = `
-  <div class="pop-up-cont">
-    <div class="pop-up-header-desk">
-      <h2>${contentItem.title}</h2>
-      <span class="close-desk" id="close-desk-">&times;</span>
-    </div>
-    <div>
-      <ul class="pop-up-tags-desk">
-        ${contentItem.technologies.map((tech) => `<li>${tech}</li>`).join('')}
-      </ul>
-    </div>
-    <div class="desk-popup-img">
-      <img src="${contentItem.img}" alt="${contentItem.title}">
-    </div>
-    <div class="popup-description-desk">
-      <p>${contentItem.desc}</p>
-    </div>
-    <div class="popup-buttons-desk">
-      <a href="${contentItem.live}" id="see-live-desk" class="see-live">See Live<img src="./img/live-desk.png"></a>
-      <a href="${contentItem.source}" id="see-source-desk" class="see-source">See Source<img src="./img/source-desk.png"></a>
-    </div>
-    </div>
-  `;
-
-    const popup = document.createElement('div');
-    popup.classList.add('pop-up-desk');
-    popup.setAttribute('id', 'popupdesk');
-    popup.innerHTML = popupHtml;
-
-    const container = document.querySelector('.deskdiv');
-    container.appendChild(popup);
-
-    const closeBtn = popup.querySelector('.close-desk');
-    closeBtn.addEventListener('click', () => {
-      container.removeChild(popup);
-    });
+navItem.forEach((n) => {
+  n.addEventListener('click', () => {
+    closeMenu();
   });
+});
 
-  // create cards for desktop
-  function generateContent(content) {
-    let html = '';
-    content.forEach((item) => {
-      html += `
-        <div class="desk-cards" style="background-image: url('${item.img}')">
-          <div class="card-content">
-            <h1 class="card-heading">${item.title}</h1>
-            <p class="card-text">${item.desc}</p>
-            <ul class="card-languages-list">
-              ${item.technologies.map((tech) => `<li>${tech}</li>`).join('')}
-            </ul>
-            <button type="button" class="button-1 see-project" id="deskbutton" data-content-id="${item.id}">
-              See Project
-            </button>
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeMenu();
+  }
+});
+
+const projects = [
+  {
+    title: 'Multi-Post Stories',
+    technologies: ['html', 'Css', 'Ruby'],
+    imageURL: [
+      './assets/images/content/work.desktop.png',
+      './assets/images/content/popup-desk.png',
+    ],
+    content:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+    description:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+    seeLiveLink: 'https://github.com/maryam0007/Portfolio-setup-and-mobile-first',
+    seeSourceLink: 'https://github.com/maryam0007/Portfolio-setup-and-mobile-first',
+  },
+  {
+    title: 'Profesional Art Printing Data More',
+    technologies: ['html', 'Css', 'Ruby'],
+    imageURL: [
+      './assets/images/content/about-4.png',
+      './assets/images/content/about-4.png',
+    ],
+    content:
+      'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industrys standard.',
+    description:
+    'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industrys standard.',
+    seeLiveLink: 'https://github.com/maryam0007/Portfolio-setup-and-mobile-first',
+    seeSourceLink: 'https://github.com/maryam0007/Portfolio-setup-and-mobile-first',
+  },
+  {
+    title: 'Data Dashboard Healthcare',
+    technologies: ['html', 'Css', 'Ruby'],
+    imageURL: [
+      './assets/images/content/about-2.png',
+      './assets/images/content/about-2.png',
+    ],
+    content:
+    'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industrys standard.',
+    description:
+    'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industrys standard.',
+    seeLiveLink: 'https://github.com/maryam0007/Portfolio-setup-and-mobile-first',
+    seeSourceLink: 'https://github.com/maryam0007/Portfolio-setup-and-mobile-first',
+  },
+  {
+    title: 'Website Portfolio ',
+    technologies: ['javascript', 'html', 'css'],
+    imageURL: [
+      './assets/images/content/about-3.png',
+      './assets/images/content/about-3.png',
+    ],
+    content:
+    'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industrys standard.',
+    description:
+    'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industrys standard.',
+    seeLiveLink: 'https://github.com/maryam0007/Portfolio-setup-and-mobile-first',
+    seeSourceLink: 'https://github.com/maryam0007/Portfolio-setup-and-mobile-first',
+  },
+  {
+    title: 'Profesional Art Printing Data More',
+    technologies: ['html', 'Css', 'Ruby'],
+    imageURL: [
+      './assets/images/content/about-4.png',
+      './assets/images/content/about-4.png',
+    ],
+    content:
+      'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industrys standard.',
+    description:
+    'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industrys standard.',
+    seeLiveLink: 'https://github.com/maryam0007/Portfolio-setup-and-mobile-first',
+    seeSourceLink: 'https://github.com/maryam0007/Portfolio-setup-and-mobile-first',
+  },
+  {
+    title: 'Data Dashboard Healthcare',
+    technologies: ['html', 'Css', 'Ruby'],
+    imageURL: [
+      './assets/images/content/about-2.png',
+      './assets/images/content/about-2.png',
+    ],
+    content:
+    'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industrys standard.',
+    description:
+    'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industrys standard.',
+    seeLiveLink: 'https://github.com/maryam0007/Portfolio-setup-and-mobile-first',
+    seeSourceLink: 'https://github.com/maryam0007/Portfolio-setup-and-mobile-first',
+  },
+  {
+    title: 'Website Portfolio ',
+    technologies: ['javascript', 'html', 'css'],
+    imageURL: [
+      './assets/images/content/about-3.png',
+      './assets/images/content/about-3.png',
+    ],
+    content:
+    'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industrys standard.',
+    description:
+    'A daily selection of privately personalized reads; no accounts or sign-ups required. Has been the industrys standard.',
+    seeLiveLink: 'https://github.com/maryam0007/Portfolio-setup-and-mobile-first',
+    seeSourceLink: 'https://github.com/maryam0007/Portfolio-setup-and-mobile-first',
+  },
+];
+
+const openModal = (i) => {
+  const projectTechs = projects[i].technologies.map(
+    (tec) => `<li class="tag">${tec}</li>`,
+  );
+
+  modal.classList.toggle('hidden');
+  wrapper.classList.toggle('blur');
+  overFlow.classList.toggle('scroll-off');
+
+  modal.innerHTML = `
+  <div class="modal-header">
+          <h1 class="primary-title modal-title">${projects[i].title}</h1>
+          <img src="assets/images/icons/Icon-Cancel.svg" alt="Cancel" class="cancel"/>
+        </div>
+        <ul class="tags">${projectTechs.join('')}
+        </ul>
+        <div class="works-stories">
+          <img
+            src=${projects[i].imageURL[1]}
+            alt="Recent Works GYMFIT Multi-Post Stories image"
+            class="avatar modal-image"
+          />
+          <div class="container space">
+            <p class="text-content works-content">
+              ${projects[i].description}
+            </p>
+            <div class="btns">
+              <a href=${projects[i].seeLiveLink
+}><button type="button" class="btn">
+                See Live
+                <img
+                  class="btn-icon"
+                  src="./assets/images/icons/Icon-power.svg"
+                /></button></a>
+              </button>
+             <a href=${projects[i].seeSourceLink
+}><button type="button" class="btn">
+                See Source
+                <img
+                  class="btn-icon"
+                  src="./assets/images/icons/github-white.svg"
+                />
+              </button></a>
+            </div>
           </div>
         </div>
-      `;
-    });
-    return html;
-  }
+  `;
+};
 
-  // Add event listener to each "See Project" button
-  if (worksectiondsk) {
-    worksectiondsk.innerHTML = generateContent(content);
+const showCards = (i) => {
+  const projectTechs = projects[i].technologies.map(
+    (tec) => `<li class="tag  card-tag">${tec}</li>`,
+  );
 
-    const seeProjectButtons = document.querySelectorAll('.see-project');
-    seeProjectButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const contentId = button.getAttribute('data-content-id');
-        const contentItem = content.find((item) => item.id === Number(contentId));
+  cards.innerHTML += `<div class="card">
+            <div class="card-content">
+              <h2 class="card-title">${projects[i].title}</h2>
+              <p class="text-content">${projects[i].content}
+              </p>
+              <ul class="tags">
+                ${projectTechs.join('')}
+              </ul>
+            </div>
+            <button type="button" class="btn mobile see-project">
+              See Project
+            </button>
+          </div>`;
+};
 
-        const popupHtml = `
-        <div class="pop-up-cont">
-          <div class="pop-up-header-desk">
-            <h2>${contentItem.title}</h2>
-            <span class="close-desk" id="close-desk-">&times;</span>
-          </div>
-          <div>
-            <ul class="pop-up-tags-desk">
-              ${contentItem.technologies.map((tech) => `<li>${tech}</li>`).join('')}
-            </ul>
-          </div>
-          <div class="desk-popup-img">
-            <img src="${contentItem.img}" alt="${contentItem.title}">
-          </div>
-          <div class="popup-description-desk">
-            <p>${contentItem.desc}</p>
-          </div>
-          <div class="popup-buttons-desk">
-            <a href="${contentItem.live}" id="see-live-desk" class="see-live">See Live<img src="./img/live-desk.png"></a>
-            <a href="${contentItem.source}" id="see-source-desk" class="see-source">See Source<img src="./img/source-desk.png"></a>
-          </div> 
-          </div>
-        `;
-
-        const popup = document.createElement('div');
-        popup.classList.add('pop-up-desk');
-        popup.setAttribute('id', 'popupdesk');
-        popup.innerHTML = popupHtml;
-
-        const container = document.querySelector('.deskdiv');
-        container.appendChild(popup);
-
-        const closeBtn = popup.querySelector('.close-desk');
-        closeBtn.addEventListener('click', () => {
-          container.removeChild(popup);
-        });
-      });
-    });
-  }
-
-  const cardsData = [
-    {
-      heading: 'Professional Art Printing Data',
-      text: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-      languages: ['html', 'bootstrap', 'Ruby'],
-      buttonLabel: 'See Project',
-    },
-    {
-      heading: 'Professional Art Printing Data',
-      text: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-      languages: ['html', 'bootstrap', 'Ruby'],
-      buttonLabel: 'See Project',
-    },
-    {
-      heading: 'Professional Art Printing Data',
-      text: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-      languages: ['html', 'bootstrap', 'Ruby'],
-      buttonLabel: 'See Project',
-    },
-    {
-      heading: 'Professional Art Printing Data',
-      text: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-      languages: ['html', 'bootstrap', 'Ruby'],
-      buttonLabel: 'See Project',
-    },
-    {
-      heading: 'Professional Art Printing Data',
-      text: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-      languages: ['html', 'bootstrap', 'Ruby'],
-      buttonLabel: 'See Project',
-    },
-    {
-      heading: 'Professional Art Printing Data',
-      text: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-      languages: ['html', 'bootstrap', 'Ruby'],
-      buttonLabel: 'See Project',
-    },
-    // Add more card data objects as needed
-  ];
-
-  // Function to generate cards dynamically
-  function generateCards() {
-    const cardContainer = worksectionmob;
-
-    // Loop through the cardsData array and create cards dynamically
-    for (let i = 0; i < cardsData.length; i += 1) {
-      const cardData = cardsData[i];
-
-      const cardDiv = document.createElement('div');
-      cardDiv.className = 'card';
-
-      const headingH1 = document.createElement('h1');
-      headingH1.className = 'card-heading';
-      headingH1.textContent = cardData.heading;
-
-      const textP = document.createElement('p');
-      textP.className = 'card-text';
-      textP.textContent = cardData.text;
-
-      const languagesUl = document.createElement('ul');
-      languagesUl.className = 'card-languages-list';
-
-      for (let j = 0; j < cardData.languages.length; j += 1) {
-        const languageLi = document.createElement('li');
-        languageLi.textContent = cardData.languages[j];
-        languagesUl.appendChild(languageLi);
-      }
-
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'btn-block button-primary';
-      button.id = 'project';
-      button.textContent = cardData.buttonLabel;
-
-      cardDiv.appendChild(headingH1);
-      cardDiv.appendChild(textP);
-      cardDiv.appendChild(languagesUl);
-      cardDiv.appendChild(button);
-
-      cardContainer.appendChild(cardDiv);
-    }
-  }
-
-  // Call the generateCards function to display the cards
-  generateCards();
-
-  // Create new array of objects for mobile
-  const cardDetails = [
-    {
-      id: 0,
-      title: 'Multi Post Stories',
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-      tecnologies: {
-        tech1: 'html',
-        tech2: 'bootstrap',
-        tech3: 'Ruby',
-      },
-      live: 'https://maryam0007.github.io/',
-      source: 'https://maryam0007.github.io/',
-      img: './img/popup-mob.png',
-    },
-    {
-      id: 1,
-      title: 'Profesional Art Printing Data',
-      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-      tecnologies: {
-        tech1: 'html',
-        tech2: 'bootstrap',
-        tech3: 'Ruby',
-      },
-      live: 'https://maryam0007.github.io/',
-      source: 'https://maryam0007.github.io/',
-      img: './img/popup-mob.png',
-    },
-    {
-      id: 2,
-      title: 'Professional Art Printing Data',
-      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-      tecnologies: {
-        tech1: 'html',
-        tech2: 'bootstrap',
-        tech3: 'Ruby',
-      },
-      live: 'https://maryam0007.github.io/',
-      source: 'https://maryam0007.github.io/',
-      img: './img/about4-res.png',
-    },
-    {
-      id: 3,
-      title: 'Professional Art Printing Data',
-      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-      tecnologies: {
-        tech1: 'html',
-        tech2: 'bootstrap',
-        tech3: 'Ruby',
-      },
-      live: 'https://maryam0007.github.io/',
-      source: 'https://maryam0007.github.io/',
-      img: './img/about4-res.png',
-    },
-    {
-      id: 4,
-      title: 'Professional Art Printing Data',
-      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-      tecnologies: {
-        tech1: 'html',
-        tech2: 'bootstrap',
-        tech3: 'Ruby',
-      },
-      live: 'https://maryam0007.github.io/',
-      source: 'https://maryam0007.github.io/',
-      img: './img/about4-res.png',
-    },
-    {
-      id: 5,
-      title: 'Professional Art Printing Data',
-      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-      tecnologies: {
-        tech1: 'html',
-        tech2: 'bootstrap',
-        tech3: 'Ruby',
-      },
-      live: 'https://maryam0007.github.io/',
-      source: 'https://maryam0007.github.io/',
-      img: './img/about4-res.png',
-    },
-    {
-      id: 6,
-      title: 'Professional Art Printing Data',
-      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-      tecnologies: {
-        tech1: 'html',
-        tech2: 'bootstrap',
-        tech3: 'Ruby',
-      },
-      live: 'https://maryam0007.github.io/',
-      source: 'https://maryam0007.github.io/',
-      img: './img/about4-res.png',
-    },
-    {
-      id: 7,
-      title: 'Professional Art Printing Data',
-      desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-      tecnologies: {
-        tech1: 'html',
-        tech2: 'bootstrap',
-        tech3: 'Ruby',
-      },
-      live: 'https://maryam0007.github.io/',
-      source: 'https://maryam0007.github.io/',
-      img: './img/about4-res.png',
-    },
-  ];
-
-  // Create pop up section for mob
-  const workdetailsSection = (content) => `
-    <div class="popup-background">
-      <div class="popup-wrapper">
-    <div class="pop-up-header" id="popupclosemobile">
-            <span class="mobileclose">&times;</span>
-            <h2>${cardDetails[content].title}</h2>
-          </div>
-          <div>
-            <ul class="pop-up-tags">
-              <li>${cardDetails[content].tecnologies.tech1}</li>
-              <li>${cardDetails[content].tecnologies.tech2}</li>
-              <li>${cardDetails[content].tecnologies.tech3}</li>
-            </ul>
-          </div>
-          <div class="mobile-popup-img">
-          <img src="${cardDetails[content].img}" alt="./img/popup-mob.png">
-          </div>
-          <div class="popup-description">
-            <p>${cardDetails[content].desc}</p>
-          </div>
-          <div class="popup-buttons">
-          <a href="${cardDetails[content].live}" id="see-live"><img src="./img/live-mob.png"></a>
-          <a href="${cardDetails[content].source}" id="see-source"> <img src="./img/source-mob.png"></a>  
-          </div> 
-          </div>
-          </div>
-    `;
-
-  const details = document.querySelectorAll('#project');
-
-  // Create pop up section for mobile
-  for (let i = 0; i < details.length; i += 1) {
-    details[i].addEventListener('click', () => {
-      const div = document.createElement('div');
-      div.classList.add('pop-up-mobile'); // Fix: corrected classList.add() method
-      div.setAttribute('id', 'popupmobile');
-      div.innerHTML = workdetailsSection(i);
-      const container = document.querySelector('.popmobdiv');
-      container.appendChild(div);
-      const closedetails = document.querySelector('.mobileclose');
-      closedetails.addEventListener('click', () => {
-        container.removeChild(div);
-      });
-    });
-  }
-
-  const popup = document.querySelector('.popup-background');
-  const body = document.querySelector('body');
-
-  function togglePopup() {
-    popup.classList.toggle('active');
-    body.classList.toggle('no-scroll');
-  }
-
-  document.querySelectorAll('.popup-trigger').forEach((button) => {
-    button.addEventListener('click', togglePopup);
+document.addEventListener('DOMContentLoaded', () => {
+  projects.forEach((ele, i) => {
+    if (i > 0) showCards(i);
   });
 
-  popup.addEventListener('click', (event) => {
-    if (event.target === popup) {
-      togglePopup();
-    }
+  const seeProject = document.querySelectorAll('.see-project');
+
+  seeProject.forEach((project, i) => {
+    seeProject[i].addEventListener('click', () => {
+      openModal(i);
+      const cancel = document.querySelector('.cancel');
+      cancel.addEventListener('click', () => {
+        modal.classList.toggle('hidden');
+        wrapper.classList.toggle('blur');
+        overFlow.classList.toggle('scroll-off');
+      });
+    });
   });
+
+  const card = document.querySelectorAll('.card');
+  document.querySelector('.avatar').src = projects[0].imageURL.at(0);
+  card.forEach((element, i) => {
+    element.style.backgroundImage = `url(${projects[i + 1].imageURL[0]})`;
+  });
+});
+
+submit.addEventListener('click', (event) => {
+  const email = document.getElementById('email').value;
+  const error = document.querySelector('.error');
+  const isLowerCase = (str) => str === str.toLowerCase();
+  if (!isLowerCase(email)) {
+    event.preventDefault();
+    error.innerHTML = 'Email has to be in lowercase!';
+    setTimeout(() => {
+      error.innerHTML = '';
+    }, 10000);
+  }
 });
