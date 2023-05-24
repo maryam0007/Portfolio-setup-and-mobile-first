@@ -234,6 +234,39 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Get references to the form fields and reset button
+const fullNameField = document.getElementById('fullName');
+const emailField = document.getElementById('email');
+const messageField = document.getElementById('message');
+const resetButton = document.getElementById('reset');
+
+// Save the form data to local storage when the user types in a field
+function changeHandler() {
+  localStorage.setItem('fullName', fullNameField.value);
+  localStorage.setItem('email', emailField.value);
+  localStorage.setItem('message', messageField.value);
+}
+
+// Add event listeners to each form field that call changeHandler when the user types in them
+fullNameField.addEventListener('input', changeHandler);
+emailField.addEventListener('input', changeHandler);
+messageField.addEventListener('input', changeHandler);
+
+// Retrieve the saved form data from local storage on page load
+window.addEventListener('load', () => {
+  fullNameField.value = localStorage.getItem('fullName') || '';
+  emailField.value = localStorage.getItem('email') || '';
+  messageField.value = localStorage.getItem('message') || '';
+});
+
+// Reset the form and clear local storage when the reset button is clicked
+resetButton.addEventListener('click', () => {
+  localStorage.clear();
+  fullNameField.value = '';
+  emailField.value = '';
+  messageField.value = '';
+});
+
 submit.addEventListener('click', (event) => {
   const email = document.getElementById('email').value;
   const error = document.querySelector('.error');
